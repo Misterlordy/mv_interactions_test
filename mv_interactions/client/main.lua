@@ -540,7 +540,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------
 RegisterNetEvent('hs_f5menu:drag')
 AddEventHandler('hs_f5menu:drag', function(copId)
-	if not isHandcuffed then
+	if not isHandcuffed or IsPedDeadOrDying(copId) == false then
 		return
 	end
 	--TriggerServerEvent('hs_f5menu:dragmess')
